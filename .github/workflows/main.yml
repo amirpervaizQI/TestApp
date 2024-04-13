@@ -1,0 +1,36 @@
+name: iOS Build and Test
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Build and Test
+    runs-on: macos-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Setup Xcode
+        uses: actions/setup-xcode@v2
+        with:
+          xcode-version: '15.0'
+
+      - name: Install Dependencies
+        run: |
+          brew install cocoapods
+          pod install
+
+      - name: Build iOS App
+        run: |
+          xcodebuild clean build -workspace TestApp.xcworkspace -scheme TestApp -destination 'platform=iOS Simulator,name=iPhone 11,OS=17.0'
+
+      - name: Run iOS Tests
+        run: |
+          xcodebuild test -workspace TestApp.xcworkspace -scheme TestApp -destination 'platform=iOS Simulator,name=iPhone 11,OS=17.0'
+
