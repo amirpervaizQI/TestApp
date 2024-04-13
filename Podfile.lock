@@ -1,0 +1,26 @@
+PODS:
+  - extol (1.0.3):
+    - RealmSwift (= 10.19.0)
+  - Realm (10.19.0):
+    - Realm/Headers (= 10.19.0)
+  - Realm/Headers (10.19.0)
+  - RealmSwift (10.19.0):
+    - Realm (= 10.19.0)
+
+DEPENDENCIES:
+  - extol (= 1.0.3)
+
+SPEC REPOS:
+  trunk:
+    - extol
+    - Realm
+    - RealmSwift
+
+SPEC CHECKSUMS:
+  extol: 64be6d6df92edf307bc1ed9a5ddbda1d638bbd4a
+  Realm: 869ab2a7e3bdfa6bf06d8723251539f504e6f602
+  RealmSwift: f1f51c4a02fe826e5cea623b5441992f06bdc942
+
+PODFILE CHECKSUM: 9322ed24d14f13fb1f864dd35106675e75fad8f8
+
+COCOAPODS: 1.15.2
