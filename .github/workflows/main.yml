@@ -20,10 +20,10 @@ jobs:
         with:
           xcode-version: '15.3'
 
-      - name: Install Dependencies
-        run: |
-          brew install cocoapods
-          pod install
+      # - name: Install Dependencies
+      #   run: |
+      #     brew install cocoapods
+      #     pod install
 
       - name: Build iOS App
         run: |
