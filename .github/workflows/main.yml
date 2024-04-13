@@ -27,8 +27,7 @@ jobs:
 
       - name: Build iOS App
         run: |
-          xcodebuild clean build -workspace TestApp.xcodeproj -scheme TestApp -destination 'platform=iOS Simulator,name=iPhone 11,OS=17.0'
-
+          xcodebuild clean build -scheme TestApp -destination 'platform=iOS Simulator,name=iPhone 11,OS=17.0'
       - name: Run iOS Tests
         run: |
           xcodebuild test -workspace TestApp.xcodeproj -scheme TestApp -destination 'platform=iOS Simulator,name=iPhone 11,OS=17.0'
